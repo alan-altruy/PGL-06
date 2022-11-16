@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="accountCreationPane" prefHeight="768.0" prefWidth="1366.0"
+            xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <Separator BorderPane.alignment="CENTER" />
+   </top>
+   <left>
+      <Pane styleClass="side-filling-pane" />
+   </left>
+   <right>
+      <Pane styleClass="side-filling-pane" />
+   </right>
+   <center>
+      <ScrollPane prefHeight="Infinity" prefWidth="Infinity" styleClass="edge-to-edge" BorderPane.alignment="CENTER"
+                  fx:id="mainScrollPane">
+         <VBox spacing="12.0">
+            <Label underline="true" fx:id="comboBoxLabel"/>
+            <ComboBox fx:id="comboBox"/>
+            <Label text="%account_type" underline="true"/>
+            <HBox prefWidth="Infinity" spacing="12" fx:id="accountTypeHBox"/>
+            <Label text="%iban" underline="true"/>
+            <HBox prefWidth="Infinity" spacing="12">
+               <TextField fx:id="ibanTextField" promptText="BE68539007547034"/>
+               <Button text="%generate_iban" fx:id="generateIbanButton"/>
+            </HBox>
+            <VBox fx:id="linkedAccountVBox" prefWidth="Infinity" spacing="8.0"/>
+            <Label text="%ownership_type" underline="true"/>
+            <HBox spacing="12" fx:id="ownershipTypeHBox"/>
+            <VBox fx:id="ownershipVBox" prefWidth="Infinity" spacing="8.0"/>
+            <VBox fx:id="titleParametersVBox" prefWidth="Infinity" spacing="8.0"/>
+            <Label fx:id="errorLabel" styleClass="error-label"/>
+            <BorderPane prefWidth="Infinity" prefHeight="0">
+               <top>
+                  <Pane prefHeight="70"/>
+               </top>
+               <center>
+                  <Button text="%send_account_opening_request" minHeight="40" prefHeight="40"
+                          fx:id="createAccountButton"/>
+               </center>
+            </BorderPane>
+         </VBox>
+      </ScrollPane>
+   </center>
+</BorderPane>

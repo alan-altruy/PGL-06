@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="openWalletPane" prefHeight="768.0" prefWidth="1366.0"
+            xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1">
+    <top>
+        <Separator BorderPane.alignment="CENTER"/>
+    </top>
+    <left>
+        <Pane prefWidth="500.0"/>
+    </left>
+    <right>
+        <Pane prefWidth="500.0"/>
+    </right>
+    <center>
+        <VBox spacing="80.0">
+            <Pane minHeight="80"/>
+            <VBox spacing="12.0">
+                <Label text="%bank" underline="true"/>
+                <ComboBox fx:id="bankComboBox"/>
+            </VBox>
+            <Button text="%send_wallet_opening_request" prefHeight="40" alignment="CENTER"
+                    fx:id="requestButton"/>
+        </VBox>
+    </center>
+    <bottom>
+        <Pane prefHeight="100"/>
+    </bottom>
+</BorderPane>

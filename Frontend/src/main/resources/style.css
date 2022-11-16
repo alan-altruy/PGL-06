@@ -1,0 +1,45 @@
+.root {
+    -fx-focus-color: GRAY;
+    -fx-faint-focus-color: transparent;
+}
+
+.side-filling-pane {
+    -fx-pref-width: 400;
+}
+
+.subtitle-borderpane {
+    -fx-min-height: 60;
+    -fx-pref-height: 60;
+}
+
+.subtitle-borderpane .label {
+    -fx-font-size: 20;
+    -fx-alignment: center;
+    -fx-underline: true;
+}
+
+.menu-button {
+    -fx-font-size: 20;
+    -fx-pref-height: 70;
+    -fx-pref-width: 300;
+}
+
+.error-label {
+    -fx-text-fill: red;
+}
+
+.event-pane {
+    -fx-background-color: orange;
+}
+
+.filters-field {
+    -fx-background-color: LIGHTGRAY;
+    -fx-hgap: 8px;
+    -fx-padding: 15px;
+    -fx-background-radius: 15px;
+}
+
+.parameters-separator .line {
+    -fx-border-width: 0.5px;
+    -fx-border-color: DARKGRAY;
+}

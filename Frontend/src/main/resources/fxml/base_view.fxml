@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="mainPane" prefHeight="768.0" prefWidth="1366.0"
+            xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1">
+ <top>
+    <BorderPane maxHeight="60.0" prefHeight="100.0" prefWidth="1366.0" BorderPane.alignment="CENTER">
+       <center>
+          <Label fx:id="titleLabel" BorderPane.alignment="CENTER">
+             <font>
+                <Font size="27.0" />
+             </font>
+          </Label>
+       </center>
+       <bottom>
+          <Separator prefWidth="1366.0" BorderPane.alignment="CENTER" />
+       </bottom>
+         <left>
+            <HBox fx:id="alignmentHBox" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+         </left>
+         <right>
+             <HBox fx:id="baseHBox" alignment="CENTER_RIGHT" prefHeight="57.0" prefWidth="216.0" spacing="8.0"
+                   BorderPane.alignment="CENTER">
+                 <padding>
+                     <Insets right="8.0"/>
+                 </padding>
+                 <Button mnemonicParsing="false" minWidth="-Infinity" text="Settings" fx:id="settingsButton"/>
+                 <Button mnemonicParsing="false" minWidth="-Infinity" text="Back" fx:id="backButton"/>
+                 <Button mnemonicParsing="false" minWidth="-Infinity" text="Logout" fx:id="logoutButton"/>
+             </HBox>
+         </right>
+    </BorderPane>
+ </top>
+ <center>
+    <BorderPane fx:id="contentPane" prefHeight="684.0" prefWidth="1366.0" BorderPane.alignment="CENTER">
+       <bottom>
+          <Separator prefHeight="3.0" prefWidth="912.0" BorderPane.alignment="CENTER" />
+       </bottom>
+    </BorderPane>
+ </center>
+ <bottom>
+     <HBox id="HBox" alignment="CENTER_LEFT" spacing="5.0" BorderPane.alignment="CENTER">
+         <padding>
+             <Insets bottom="3.0" left="5.0" right="5.0" top="3.0"/>
+         </padding>
+         <Label fx:id="usernameLabel" maxHeight="Infinity" text="%disconnected" HBox.hgrow="ALWAYS">
+             <font>
+                 <Font size="11.0" fx:id="x3"/>
+             </font>
+             <textFill>
+                 <Color red="0.4" green="0.4" blue="0.4" fx:id="x4"/>
+             </textFill>
+         </Label>
+         <Pane HBox.hgrow="ALWAYS"/>
+         <Label fx:id="dateLabel" font="$x3" textFill="$x4" HBox.hgrow="NEVER"/>
+     </HBox>
+ </bottom>
+</BorderPane>

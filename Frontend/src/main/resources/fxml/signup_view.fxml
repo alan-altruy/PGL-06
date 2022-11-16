@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.DatePicker?>
+
+<BorderPane fx:id="signupPane" prefHeight="768.0" prefWidth="1366.0"
+            xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1" >
+<top>
+    <Separator BorderPane.alignment="CENTER" />
+</top>
+<center>
+    <VBox spacing="8.0">
+        <Label text="%language" underline="true"/>
+        <ComboBox prefWidth="150.0" fx:id="languageComboBox"/>
+        <Label/>
+        <Label text="%name" underline="true"/>
+        <TextField promptText="John Doe" fx:id="nameTextField"/>
+        <Label text="%nat_reg_number" underline="true"/>
+        <TextField promptText="99112068594" fx:id="nrnTextField"/>
+        <Label text="%birthdate" underline="true"/>
+        <DatePicker fx:id="birthdatePicker"/>
+        <Label text="%password" underline="true"/>
+        <PasswordField promptText="%password" fx:id="passwordField"/>
+        <Label text="%confirm_password" underline="true"/>
+        <PasswordField promptText="%password" fx:id="confirmPasswordField"/>
+        <Label fx:id="errorLabel" styleClass="error-label"/>
+        <BorderPane prefWidth="Infinity" prefHeight="0">
+            <top>
+                <Pane prefHeight="60"/>
+            </top>
+            <center>
+                <Button mnemonicParsing="false" minHeight="40" fx:id="registerButton"/>
+            </center>
+        </BorderPane>
+    </VBox>
+</center>
+<left>
+    <Pane styleClass="side-filling-pane" BorderPane.alignment="CENTER" />
+</left>
+<right>
+    <Pane styleClass="side-filling-pane" BorderPane.alignment="CENTER" />
+</right>
+
+</BorderPane>
